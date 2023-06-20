@@ -12,6 +12,11 @@ function addNum1() {
 */
 
 function baiTap1() {
-  let listNum = addNum1();
-  console.log(listNum);
+  // let listNum = addNum1();
+  console.log(stringNum);
+  let result = 0;
+  for (let i = 0; i < stringNum.length; i++) {
+    result += stringNum[i];
+  }
+  console.log(result);  
 }
