@@ -173,8 +173,8 @@ function baiTap9() {
 */
 
 function baiTap10() {
-  vowelNum = [];
-  positiveIntegerNum = [];
+  let vowelNum = [];
+  let positiveIntegerNum = [];
   for (let i = 0; i < arrNum.length; i++) {
     if (arrNum[i] < 0) {
       vowelNum.push(arrNum[i]);
