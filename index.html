@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Bài tập Js buổi 7-8</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -23,8 +23,8 @@
       <!-- Input Array -->
       <section class="mb-3">
         <div class="form-group d-flex mb-3">
-          <input type="text" id="input-num" class="form-control w-25 me-3" />
-          <button class="btn btn-success" id="btnAddNum" onclick="addNum1()">
+          <input type="number" id="input-num" class="form-control w-25 me-3" />
+          <button class="btn btn-success" id="btnAddNum" onclick="addNum()">
             Thêm số
           </button>
         </div>
@@ -50,7 +50,7 @@
           </button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua1"></span>
+              Kết quả => <span id="ketQua1"></span>
             </p>
           </div>
         </div>
@@ -70,10 +70,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample2">
-          <button class="btn btn-success mb-3">Đếm số</button>
+          <button class="btn btn-success mb-3" onclick="baiTap2()">Đếm số</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua2"></span>
+              Kết quả => <span id="ketQua2"></span>
             </p>
           </div>
         </div>
@@ -93,10 +93,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample3">
-          <button class="btn btn-success mb-3">Tìm số nhỏ nhất</button>
+          <button class="btn btn-success mb-3" onclick="baiTap3()">Tìm số nhỏ nhất</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua3"></span>
+              Kết quả => <span id="ketQua3"></span>
             </p>
           </div>
         </div>
@@ -116,10 +116,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample4">
-          <button class="btn btn-success mb-3">Tìm số dương nhỏ nhất</button>
+          <button class="btn btn-success mb-3" onclick="baiTap4()">Tìm số dương nhỏ nhất</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua4"></span>
+              Kết quả => <span id="ketQua4"></span>
             </p>
           </div>
         </div>
@@ -139,10 +139,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample5">
-          <button class="btn btn-success mb-3">Tìm số chẵn</button>
+          <button class="btn btn-success mb-3" onclick="baiTap5()">Tìm số chẵn</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua5"></span>
+              Kết quả => <span id="ketQua5"></span>
             </p>
           </div>
         </div>
@@ -162,10 +162,14 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample6">
-          <button class="btn btn-success mb-3">Đổi chỗ</button>
+          <div class="change d-flex mb-3 w-50">
+            <input type="number" placeholder="Nhập vị trí 1" id="change1" class="form-control w-50 me-3">
+            <input type="number" placeholder="Nhập vị trí 2" id="change2" class="form-control w-50">
+          </div>
+          <button class="btn btn-success mb-3" onclick="baiTap6()">Đổi chỗ</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua6"></span>
+              Kết quả => <span id="ketQua6"></span>
             </p>
           </div>
         </div>
@@ -185,10 +189,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample7">
-          <button class="btn btn-success mb-3">Sắp xếp</button>
+          <button class="btn btn-success mb-3" onclick="baiTap7()">Sắp xếp</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua7"></span>
+              Kết quả => <span id="ketQua7"></span>
             </p>
           </div>
         </div>
@@ -208,10 +212,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample8">
-          <button class="btn btn-success mb-3">Tìm số nguyên tố</button>
+          <button class="btn btn-success mb-3" onclick="baiTap8()">Tìm số nguyên tố</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua8"></span>
+              Kết quả => <span id="ketQua8"></span>
             </p>
           </div>
         </div>
@@ -231,7 +235,14 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample9">
-          <button class="btn btn-success mb-3">Đếm số nguyên</button>
+          <div class="form-group d-flex mb-3">
+            <input type="number" id="input-num2" class="form-control w-25 me-3" placeholder="Nhập số"/>
+            <button class="btn btn-success" id="btnAddNum" onclick="addNum2()">
+              Thêm số
+            </button>
+          </div>
+          <p class="alert alert-primary w-50">=> <span id="print2"></span></p>
+          <button class="btn btn-success mb-3" onclick="baiTap9()">Đếm số nguyên</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
               Kết quả: <span id="ketQua9"></span>
@@ -254,10 +265,10 @@
           </a>
         </p>
         <div class="collapse" id="collapseExample10">
-          <button class="btn btn-success mb-3">So sánh</button>
+          <button class="btn btn-success mb-3" onclick="baiTap10()">So sánh</button>
           <div class="card card-body p-0 w-50">
             <p class="alert alert-danger mb-0">
-              Kết quả: <span id="ketQua10"></span>
+              Kết quả => <span id="ketQua10"></span>
             </p>
           </div>
         </div>
