@@ -113,12 +113,11 @@ function baiTap6() {
   //B1: DOM là khỏi tạo 2 biến change1, change2: number
   let change1 = +document.getElementById("change1").value;
   let change2 = +document.getElementById("change2").value;
-  //B2: Lấy 2 số trong mảng mình vừa nhập gán vào 2 biến tạm
-  let create1 = arrNum.splice(change1, 1);
-  let create2 = arrNum.splice(change2 - 1, 1);
-  //B3: Đỗi chỗ 2 vị trí vừa gán
-  arrNum.splice(change1, 0, Number(create2.join("")));
-  arrNum.splice(change2, 0, Number(create1.join("")));
+  //B2: Tạo 1 biến tạm gán nó bằng số vị trí thứ 1
+  let create = arrNum[change1];
+  //B3: Gán vị trí mảng thứ 1 bằng trị trí mảng thứ 2, sau đó gán vị trí mảng thứ 2 với biến tạm mình vừa gán lúc đầu
+  arrNum[change1] = arrNum[change2];
+  arrNum[change2] = create;
   //B4: In kết quả ra màn hình
   document.getElementById("ketQua6").innerHTML = arrNum;
 }
