@@ -16,7 +16,9 @@ function baiTap1() {
   let result = 0;
   //B2: Xử lí
   for (let i = 0; i < arrNum.length; i++) {
-    result += arrNum[i];
+    if (arrNum[i] >= 0) {
+      result += arrNum[i];
+    }
   }
   //B3: In kết quả ra màn hình
   document.getElementById("ketQua1").innerHTML = `Tổng số dương: ${result}`;
@@ -113,6 +115,12 @@ function baiTap6() {
   //B1: DOM là khỏi tạo 2 biến change1, change2: number
   let change1 = +document.getElementById("change1").value;
   let change2 = +document.getElementById("change2").value;
+  // Nếu nhập sai vị trí không có trong mảng thì sẽ xuất thông báo
+  if (change1 > arrNum.length || change2 > arrNum.length) {
+    return (document.getElementById(
+      "ketQua6"
+    ).innerHTML = `Không thể đổi vị trí vì một trong 2 vị trí bạn nhập không có trong mảng`);
+  }
   //B2: Tạo 1 biến tạm gán nó bằng số vị trí thứ 1
   let create = arrNum[change1];
   //B3: Gán vị trí mảng thứ 1 bằng trị trí mảng thứ 2, sau đó gán vị trí mảng thứ 2 với biến tạm mình vừa gán lúc đầu
