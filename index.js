@@ -116,7 +116,7 @@ function baiTap6() {
   let change1 = +document.getElementById("change1").value;
   let change2 = +document.getElementById("change2").value;
   // Nếu nhập sai vị trí không có trong mảng thì sẽ xuất thông báo
-  if (change1 > arrNum.length || change2 > arrNum.length) {
+  if (change1 >= arrNum.length || change2 >= arrNum.length) {
     return (document.getElementById(
       "ketQua6"
     ).innerHTML = `Không thể đổi vị trí vì một trong 2 vị trí bạn nhập không có trong mảng`);
